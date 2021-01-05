@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyFundamentalsApplication</string>
+    <string name="registration">Spune-ne câte ceva despre tine pentru a-ți personaliza
+        conținutul</string>
+    <string name="name">Nume</string>
+    <string name="email">email@email.com</string>
+    <string name="birth_date">zz/ll/aaaa</string>
+    <string name="terms_and_conditions">Sunt de acord cu termenii si conditiile</string>
+    <string name="submit">Salvează</string>
+</resources>
