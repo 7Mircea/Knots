@@ -24,23 +24,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final String SHARED_PREFS = "prefs";
     private static final String SHARED_PREFS_REGISTERED = "alreadyRegistered";
     DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //stabilim daca utilizatorul este logat sau nu
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 
         Intent incomingIntent = getIntent();
         String name = incomingIntent.getStringExtra("name");
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(SHARED_PREFS_REGISTERED,true);
+        editor.putBoolean(SHARED_PREFS_REGISTERED, true);
         editor.commit();
 
-        boolean alreadyRegistred = sharedPreferences.getBoolean(SHARED_PREFS_REGISTERED,false);
+        boolean alreadyRegistred = sharedPreferences.getBoolean(SHARED_PREFS_REGISTERED, false);
         if (!alreadyRegistred) {
-            Intent intent = new Intent(MainActivity.this,RegistrationActivity.class);
+            Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
             startActivity(intent);
         }
 
@@ -51,16 +52,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //setam navigation view
         drawer = findViewById(R.id.drawer_layout);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer
-                ,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer
+                , toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container,new MainFragment())
+                    .replace(R.id.fragment_container, new MainFragment())
                     .commit();
             navigationView.setCheckedItem(R.id.nav_knots);
         }
@@ -69,11 +70,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_knots :
-                Toast.makeText(this,"Ai apasat pe knots",Toast.LENGTH_LONG).show();
+            case R.id.nav_knots:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new ChooseKnotFragment())
+                        .commit();
                 break;
-            case R.id.nav_questions :
-                Toast.makeText(this,"Ai apasat pe questions",Toast.LENGTH_LONG).show();
+            case R.id.nav_questions:
+                Toast.makeText(this, "Ai apasat pe questions", Toast.LENGTH_LONG).show();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

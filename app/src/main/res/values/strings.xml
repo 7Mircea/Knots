@@ -16,4 +16,42 @@
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="coada_vacii_description">Este un nod foarte des folosit datorită faptului că
+        se execută uşor şi repede şi în acelaşi timp este sigur.
+        Dezavantaj – la solicitare puternică se strânge foarte tare şi cu greu se mai poate desface.
+    </string>
+    <string name="doiul_cu_bolta_description">Se foloseşte la îmbinarea a două sfori de grosimi
+        diferite. Se face o buclă cu sfoara mai groasă.\n
+        Peste buclă se aşază sfoara subţire. Cu unul dintre capetele sforii subţiri se înconjoară
+        bucla şi se trece, prin ea, pe deasupra. Pentru siguranţă, la capetele libere se poate
+        face câte un nod simplu.
+    </string>
+    <string name="doiul_simplu_description">
+        Este unul dintre cele mai folosite noduri. Este foarte uşor de executat şi se desface uşor
+        după utilizare. Doiul simplu se foloseşte la înnădirea a două sfori de aceeaşi grosime.
+        Dacă sforile nu au aceeaşi grosime, fineţe şi structură, nodul se desface.
+        Dacă nu au capetele paralele ca în desen, devine doiul fals sau precupeţ, care se desface
+        sau se încurcă. Pentru a ţine minte cum să faci corect acest nod, gândeşte astfel:
+        „stânga peste dreapta, dreapta peste stânga”, sau invers.
+    </string>
+    <string name="jumatate_de_ochi_description">
+        Jumătatea de ochi este cel mai rapid mod de a prinde o sfoară de un obiect. Se trece sfoara
+        în jurul obiectului, peste şi sub corpul sforii. Este propriu-zis un nod simplu trecut peste
+        obiect. Pentru o mai mare siguranţă se adaugă un nod simplu, formând astfel două jumătăţi de
+        ochi. Stă la baza multor noduri şi face faţă relativ bine unei tensiuni constante, mai ales
+        dacă asiguraţi capătul liber cu un nod pentru capăt de frânghie.
+    </string>
+    <string name="nodul_chirurgului_description">
+        Faţă de doiul simplu, acesta are primul nod simplu înfăşurat de două ori şi astfel rămâne
+        strâns până se face şi al doilea nod – ceea ce e foarte folositor chirurgilor în timpul
+        operaţiei.
+    </string>
+    <string name="optul_de_strangere_description">
+        Serveşte la fixarea sforii în jurul unui suport (ţăruş, copac etc.). Se poate executa în
+        două moduri, în funcţie de suport.\n
+        Este uşor de realizat, se desface şi se mută uşor, datorită faptului că nu răsuceşte sau
+        îndoaie frânghia, nu o slăbeşte şi nici nu o solicită prea mult în vreun punct. Nu alunecă,
+        dar dacă frânghia nu este bine întinsă, se poate desface. În cazul în care doar unul dintre
+        capete trebuie solicitat, este recomandată folosirea altui nod.
+    </string>
 </resources>
