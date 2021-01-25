@@ -54,4 +54,16 @@
         dar dacă frânghia nu este bine întinsă, se poate desface. În cazul în care doar unul dintre
         capete trebuie solicitat, este recomandată folosirea altui nod.
     </string>
+    <string name="score">Scor: 0</string>
+    <string name="question_count">Întrebare: 1/n</string>
+    <string name="countdown">00:30</string>
+    <string name="radio_button1">Varianta 1</string>
+    <string name="radio_button2">Varianta 2</string>
+    <string name="radio_button3">Varianta 3</string>
+    <string name="radio_button4">Varianta 4</string>
+    <string name="question">Întrebarea se încarcă :)</string>
+    <string name="confirm_next">Am terminat :)</string>
+    <string name="next_button">Următoarea întrebare</string>
+    <string name="finish_button">Final</string>
+    <string name="alege_varianta">Alege o variantă</string>
 </resources>

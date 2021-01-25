@@ -1,0 +1,13 @@
+2
+1. Ce nod se folosește pentru unirea a două sfori?
+doiul simplu
+coada vacii
+jumătate de ochi
+optul de strângere
+1
+2. Ce nod se folosește pentru a forma un laț fix?
+doiul simplu
+coada vacii
+doiul cu bolta
+optul de strângere
+2
