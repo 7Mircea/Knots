@@ -1,5 +1,6 @@
 package com.example.myfundamentalsapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -13,6 +14,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
@@ -261,7 +263,22 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
-        finish();
+        AlertDialog.Builder builder = new AlertDialog.Builder(QuestionActivity.this);
+        builder.setTitle("Rezultate");
+        String message = "Ai obținut " + score + " puncte din " + questionCountTotal
+                + " posibile.";
+        builder.setMessage(message);
+        builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent it = new Intent(QuestionActivity.this, MainActivity.class);
+                startActivity(it);
+                dialog.dismiss();
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     private static int StringToInt(String string, boolean isFirstLineOfFile) {

@@ -68,7 +68,7 @@ public class Question implements Parcelable {
     public void setQuestion(String question) {
         // afla pozitia la care se afla .
         int i = 0;
-        while(question.charAt(i++) != 46);
+        while(question.charAt(i++) != 46 && i < question.length());
         // salveaza intrebarea fara numarul ei si fara punct
         this.question = question.substring(i);
     }

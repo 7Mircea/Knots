@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,9 +35,17 @@ public class ChooseKnotFragment extends Fragment {
         onClickInterface = new OnClickInterface() {
             @Override
             public void onClick(int position) {
-                Intent intent = new Intent(getActivity(),KnotActivity.class);
-                intent.putExtra("position",position);
-                startActivity(intent);
+                //Intent intent = new Intent(getActivity(),KnotActivity.class);
+                //intent.putExtra("position",position);
+                //startActivity(intent);
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                KnotFragment knotFragment = new KnotFragment();
+                Bundle bundle = new Bundle();
+                bundle.putInt("position",position);
+                knotFragment.setArguments(bundle);
+                transaction.replace(R.id.fragment_container,knotFragment);
+                transaction.addToBackStack("knotFragment");
+                transaction.commit();
             }
         };
         final KnotAdapter adapter = new KnotAdapter(getContext(),onClickInterface);
@@ -56,4 +66,6 @@ public class ChooseKnotFragment extends Fragment {
 
 
     }
+
+
 }

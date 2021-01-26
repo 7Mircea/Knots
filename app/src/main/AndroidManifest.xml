@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFundamentalsApplication">
         <activity android:name=".QuestionActivity"></activity>
-        <activity android:name=".KnotActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity
             android:name=".MainActivity"
