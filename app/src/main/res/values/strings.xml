@@ -66,4 +66,7 @@
     <string name="next_button">Următoarea întrebare</string>
     <string name="finish_button">Final</string>
     <string name="alege_varianta">Alege o variantă</string>
+    <string name="main_fragment_description">Dacă vrei să știi cum să te descurci în afara
+        civilizației trebuie să înveți să faci noduri. Noduri pentru a uni două sfori,
+    pentru a lega cortul de tarusi, pentru a crea laturi fixe și mobile și așa mai departe.</string>
 </resources>
